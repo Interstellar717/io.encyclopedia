@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Home | Schoology</title>
+	<link type="image/png" rel="shortcut icon"
+		href="https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/favicon.ico" id="favicon" />
+
+	<link rel="stylesheet" href="assets/styles/main.css">
+	<link rel="stylesheet" href="assets/styles/tabs.css">
+	<link rel="stylesheet" href="assets/styles/slider.css">
+	<!-- <link rel="stylesheet" href="assets/styles/peer.css"> -->
+</head>
+
+<body>
+	<div class="blur-background" style="opacity: 0; z-index: -1;"></div>
+
+	<div class="tab-container" style="display: none;">
+		<button id="hide-window" class="msr">hide</button>
+		<button class="new-tab">+</button>
+	</div>
+
+	<div class="creation-dialog" style="display: none;">
+		<input type="text" id="creation-url-input" class="dialog-input" placeholder="Enter URL">
+		<input type="text" id="creation-title-input" class="dialog-input" placeholder="Enter tab title">
+	</div>
+
+	<script>
+
+	</script>
+	<a href="./test.html" style="color:white; text-decoration: none; width: fit-content; display: inline-block;">
+		<h1 style="display: block; padding: 10px; margin-top: 50px;">io.encyclopedia</h1>
+	</a>
+	<button onclick="window.location.href=`https://ocs.schoology.com`" class="msr" id="quick-esc">close</button>
+
+
+	<!-- <br> -->
+	<!-- <h2>Quick Start</h2> -->
+	<h3>Hold<button style="width: 100px; margin: 20px;" id="shift">Shift</button> for Quick Start</h3>
+	<div id="keyboard">
+		<table style="margin-left: 0vw;">
+			<tr>
+				<td>1<span title="bloxd.io has been disabled">Bloxd</span>
+
+				</td>
+				<td>2<span>Defly</span>
+
+				</td>
+				<td>3<span>Yohoho</span>
+
+				</td>
+				<td>4<span>Pentolla</span>
+
+				</td>
+				<td>5<span>Krunker</span>
+
+				</td>
+				<td>6<span>Deadshot</span>
+
+				</td>
+				<td>7<span>Lolbeans</span>
+
+				</td>
+				<td>8<span>Bumpyball</span>
+
+				</td>
+				<td>9<span title="Resent">Resent</span>
+
+				</td>
+				<td>0<span>Air Wars</span>
+				</td>
+			</tr>
+		</table>
+		<table style="margin-left: 2.8vw;">
+			<tr>
+				<td>q<span>osu!mania</span>
+				</td>
+				<td>w<span>Wordle</span>
+				</td>
+				<td>e<span>Coptor</span>
+				</td>
+				<td>r<span>Tanksmith</span>
+				</td>
+				<td>t<span>Snowball</span>
+				</td>
+				<td>y<span title="hole.io">Hole.io</span>
+				</td>
+				<td>u<span>Monopoly</span>
+				</td>
+				<td>i<span>Snake</span>
+				</td>
+				<td>o<span title="Retrogames.cc">Retrogames</span>
+				</td>
+				<td>p<span>Mattle</span>
+				</td>
+			</tr>
+		</table>
+		<table style="margin-left: 5.8vw;">
+			<tr>
+				<td>a<span>Bonk</span>
+				</td>
+				<td>s<span>Hitbox</span>
+				</td>
+				<td>d<span>Polytrack</span>
+				</td>
+				<td>f<span>Proxy</span>
+				</td>
+				<td>g<span>Skribbl</span>
+				</td>
+				<td>h<span title="agar.io">Agar.io</span>
+				</td>
+				<td>j<span title="Space Waves">SWaves</span>
+				</td>
+				<td>k<span title="Eaglercraft">Eagler</span>
+				</td>
+				<td>l<span>Miniplay</span>
+				</td>
+			</tr>
+		</table>
+		<table style="margin-left: 8.6vw;">
+			<tr>
+				<td>z<span>Drift3</span>
+				</td>
+				<td>x<span title="Rocket Soccer Derby">RocSocDer</span>
+				</td>
+				<td>c<span>Poker</span>
+				</td>
+				<td>v<span>Mario</span>
+				</td>
+				<td>b<span>osu!</span>
+				</td>
+				<td>n<span>Miniblox</span>
+				</td>
+				<td>m<span>Virlan</span>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+		<table style="margin-left: 19.85vw;">
+			<tr>
+				<td class="new-tab" id="spacebar">+</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<br>
+	<!-- LEFT SIDEBAR -->
+	<div class="sidebar left">
+
+		<button id="change-title" onclick="changeTitle()" style="width: 13.6vw;">Change Page Title</button>
+		<br>
+		<button id="go-home" onclick="home()" style="width: 13.6vw;">Homepage</button>
+		<br>
+		<input type="range" min="10" max="60" , step="5" id="ui-size">
+		<span id="ui-size-span" style="transform: translate(10px, 3px); position: absolute;"></span>
+		<br>
+		<span class="toggleTitle" onclick="document.getElementsByClassName('switch')[0].click()"
+			style="cursor: pointer;">Clickable Keys</span>
+		<label class="switch" style="transform: translate(7px, 7px);">
+			<input class="checkbox" type="checkbox" id="toggle-click-keys">
+			<span class="slider round"></span>
+		</label>
+
+
+		<!-- PEER HTML -->
+		<!-- <div class="peer-bar">
+			<div class="sender-ui">
+				<h1>Sender</h1>
+				<span id="sender-status"></span>
+				<span id="sender-status-icon"></span>
+				<input type="text" id="peer1Id" placeholder="Peer ID" value="">
+				<button onclick="setSenderID(qs('#peer1Id').value)" id="set-sender-id" class="peer-btn">Set
+					ID</button>
+				<button onclick="peer_sen && closeSen()" id="close-sender" class="peer-btn">Destroy</button>
+				<br><br>
+				<input type="text" id="peerId-connect" placeholder="Peer ID" value="">
+				<button onclick="connect()" id="connect-btn" class="peer-btn">Connect</button>
+				<button onclick="sendShare()" id="share-btn" class="peer-btn" disabled>Share</button>
+				<div class="chat-sender">
+					<h1 style="margin-bottom: 10px;">Chat</h1>
+					<div id="sender-msgs"></div>
+
+					<input id="chat-sender-input" placeholder="Send  a message">
+
+					<button id="chat-sender-send"
+						onclick="sendMsg(this.parentElement.querySelector('input').value)">&gt;</button>
+				</div>
+			</div>
+
+			<div class="receiver-ui">
+				<h1>Receiver</h1>
+				<span id="receiver-status"></span>
+				<span id="receiver-status-icon"></span>
+				<input type="text" id="peer2Id" placeholder="Peer ID" value="">
+				<button onclick="setReceiverID(qs('#peer2Id').value)" class="peer-btn">Set ID</button>
+				<button onclick="peer_rec && closeRec()" id="close-receiver" class="peer-btn">Destroy</button>
+				<br><br>
+				<div class="chat-receiver">
+					<h1 style="margin-bottom: 10px;">Chat</h1>
+					<div id="receiver-msgs"></div>
+					<input id="chat-receiver-input" placeholder="Send  a message">
+
+					<button id="chat-receiver-send"
+						onclick="sendMsg(this.parentElement.querySelector('input').value)">&gt;</button>
+				</div>
+			</div>
+		</div> -->
+		<!-- END PEER HTML -->
+
+	</div>
+
+	<!-- RIGHT SIDEBAR -->
+	<div class="sidebar right">
+
+		<input id="url_right" placeholder="Enter URL.."><br>
+		<button onclick='change(document.getElementById("url_right").value, "l")' id="url_btn_right"
+			style="width: 7.75vw;">Go</button>
+		<button onclick='change("", "l")' id="reset-right" style="width: 7.75vw;">Reset</button>
+
+		<br>
+		<iframe id="right-frame"></iframe>
+
+	</div>
+
+	<button class="toggle-sidebar left">menu</button>
+	<button class="toggle-sidebar right">menu</button>
+</body>
+
+
+<!-- MAIN SCRIPT -->
+<script src="assets/scripts/data.js"></script>
+<script src="assets/scripts/tabs.js"></script>
+<script src="assets/scripts/main.js"></script>
+
+<!-- PEER JS -->
+<!-- <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script> -->
+<!-- <script src="assets/scripts/peer.js"></script> -->
+
+</html>
