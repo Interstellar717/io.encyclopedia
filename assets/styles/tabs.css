@@ -1,0 +1,99 @@
+.tab-frame {
+    width: 100%;
+    height: calc(100% - 50px);
+    position: absolute;
+    top: 50px;
+    left: 0vw;
+    border: none;
+}
+
+.tab-container {
+    display: inline-block;
+    width: 99%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0.5vw;
+}
+
+
+.tab-label {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 0.1px white solid;
+    border-radius: 20px 20px 0 0;
+    padding: 10px 30px;
+    text-align: left;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    cursor: pointer;
+    transition: 0.25s all;
+}
+
+.tab-label:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tab-label.active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.tab-label.active:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tab-container,
+.tab-frame,
+.tab-label {
+    user-select: none;
+}
+
+/* 
+.tab-container .new-tab {
+    border-radius: 0.8vh;
+    padding: 10px 10px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.25s all;
+    aspect-ratio: 1 / 1;
+    font-size: 30px;
+    line-height: 0;
+    align-content: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+} */
+
+.creation-dialog {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0.1px solid white;
+    width: 500px;
+    height: fit-content;
+    padding: 50px 30px;
+    border-radius: 30px;
+    top: calc(50vh - 97.5px - 30px);
+    left: calc(50vw - 250px - 30px);
+    z-index: 11;
+}
+
+.dialog-input {
+    width: 300px;
+}
+
+.dialog-input:focus,
+.dialog-input:hover {
+    background-color: rgba(200, 200, 200, 0.5);
+}
+
+.blur-background {
+    backdrop-filter: blur(2px);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3);
+}

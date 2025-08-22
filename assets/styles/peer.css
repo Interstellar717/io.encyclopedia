@@ -1,0 +1,192 @@
+.peer-bar span {
+    display: block;
+}
+
+/* .peer-bar {
+    transform: translate(-10px, 74vh) translateZ(10px);
+
+} */
+
+.peer-bar * {
+    transform: unset;
+}
+
+
+#video {
+    width: 100%;
+    border-radius: 10px;
+    border: solid white 2px;
+}
+
+* {
+    transition: 0.5s all;
+}
+
+
+input [type="text"],
+input {
+    width: 65px;
+}
+
+.peer-bar button,
+.peer-bar input,
+.peer-bar textarea {
+    padding: 5.5px;
+    background-color: transparent;
+    border: solid white 1px;
+    border-radius: 5px;
+    align-self: center;
+    align-content: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+.sender-ui,
+.receiver-ui,
+.chat-sender,
+.chat-receiver {
+    width: 200px;
+    height: fit-content;
+    padding: 20px;
+    background: black;
+    border-radius: 18px;
+    border: solid white 2px;
+    position: absolute;
+    transform: translateX(-240px);
+    transform-style: preserve-3d;
+}
+
+.sender-ui *,
+.receiver-ui *,
+.chat-sender *,
+.chat-receiver * {
+    font-size: 0.65em;
+}
+
+.sender-ui:hover:not(.selected):not(.disabled),
+.receiver-ui:hover:not(.selected):not(.disabled) {
+    transform: translateX(-10px);
+}
+
+.sender-ui:hover:not(.selected):not(.disabled) .chat-sender,
+.receiver-ui:hover:not(.selected):not(.disabled) .chat-receiver {
+    transform: translateX(-10px) translateZ(-1px);
+}
+
+.sender-ui.selected .chat-sender {
+    transform: translateX(calc(-240px - 4px)) translateY(70%) translateZ(0px);
+}
+
+.receiver-ui.selected .chat-receiver {
+    /* translateX(calc(-240px - 4px)) translateY(100%) translateZ(-10px) */
+    transform: translateX(calc(-240px - 4px)) translateY(45%) translateZ(0px)
+}
+
+.sender-ui.selected {
+    transform: translateX(-10px) translateZ(-1px);
+    bottom: 250px;
+}
+
+.receiver-ui.selected {
+    transform: translateX(-10px) translateY(calc(-100%)) translateZ(-1px);
+    bottom: 0px;
+}
+
+.sender-ui {
+    bottom: 370px;
+    left: 0;
+    height: 199.5px;
+}
+
+.receiver-ui {
+    bottom: 100px;
+    left: 0;
+    height: 199.5px;
+}
+
+
+#sender-status,
+#receiver-status {
+    width: 300px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+span#sender-status-icon,
+span#receiver-status-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+}
+
+.sender-ui.disabled,
+.receiver-ui.disabled {
+    transform: translateX(-375px);
+}
+
+
+.chat-sender,
+.chat-receiver {
+    position: absolute;
+    top: -2px;
+    right: -102%;
+    height: calc(100% - 40px);
+    transform: translateX(-245px) translateZ(-1px);
+}
+
+input#chat-receiver-input,
+input#chat-sender-input {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 40px - 40px);
+    font-size: 10px;
+}
+
+button#chat-receiver-send,
+button#chat-sender-send {
+    aspect-ratio: 1/1;
+    height: 26.5px;
+    padding: 0;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+#sender-msgs,
+#receiver-msgs {
+    width: calc(100% - 20px);
+    height: calc(50%);
+    border: solid white 2px;
+    border-radius: 10px;
+    overflow-y: scroll;
+    padding: 10px;
+    font-size: 12px;
+    word-wrap: break-word;
+}
+
+#sender-msgs::-webkit-scrollbar,
+#receiver-msgs::-webkit-scrollbar {
+    display: none;
+}
+
+#peer1Id,
+#peer2Id,
+#peerId-connect {
+    width: calc(100% - 130px - 6.7px);
+}
+
+.peer-btn {
+    width: clamp(10%, 65px, calc(30% - 12px));
+}
+
+.sender-ui h1,
+.receiver-ui h1 {
+    font-size: 20px;
+    margin-top: 0;
+}
